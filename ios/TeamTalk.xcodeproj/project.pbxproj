@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6802F6EF490DEE71C0552E98 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C945FDB2D00B8D439C777 /* libPods.a */; };
 		810D52181B50ECFA004DF7B4 /* bgImage_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 810D52141B50ECFA004DF7B4 /* bgImage_HL@2x.png */; };
 		810D52191B50ECFA004DF7B4 /* cellLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 810D52151B50ECFA004DF7B4 /* cellLine@2x.png */; };
 		810D521A1B50ECFA004DF7B4 /* LCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 810D52171B50ECFA004DF7B4 /* LCActionSheet.m */; };
@@ -43,8 +42,6 @@
 		8157DB831B47DED800043E0F /* chatBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8157DB821B47DED800043E0F /* chatBg.png */; };
 		8170B6911B3934320011E0D0 /* MTTSignatureAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8170B6901B3934320011E0D0 /* MTTSignatureAPI.m */; };
 		8176F8101B462B39004E4775 /* UIImage+Rotate_Flip.m in Sources */ = {isa = PBXBuildFile; fileRef = 8176F80F1B462B39004E4775 /* UIImage+Rotate_Flip.m */; };
-		817CB3B01B3BC6E80004AFEA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817CB3AE1B3BC6E80004AFEA /* Fabric.framework */; };
-		817CB3B11B3BC6E80004AFEA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817CB3AF1B3BC6E80004AFEA /* Crashlytics.framework */; };
 		817CB3B41B3C04940004AFEA /* MTTGroupInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 817CB3B31B3C04940004AFEA /* MTTGroupInfoCell.m */; };
 		818654921B3424E3006AFD8F /* MTTUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 818654911B3424E3006AFD8F /* MTTUserInfoCell.m */; };
 		818BB5771B43DB1B0023AAE2 /* MTTAvatarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 818BB5761B43DB1B0023AAE2 /* MTTAvatarManager.m */; };
@@ -84,6 +81,7 @@
 		81F8502A1B58B4F60004F6DE /* MTTPCStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F850291B58B4F60004F6DE /* MTTPCStatusCell.m */; };
 		81F8502C1B58BD300004F6DE /* mac_logined@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F8502B1B58BD300004F6DE /* mac_logined@2x.png */; };
 		81F8502F1B58E3110004F6DE /* MTTPCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F8502E1B58E3110004F6DE /* MTTPCLoginViewController.m */; };
+		A94D6127417B5BE08B352666 /* Pods_TeamTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289CA7E24D472A6E3EA935A3 /* Pods_TeamTalk.framework */; };
 		C00078421B3A466700E7E5B8 /* UIView+PointBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = C00078411B3A466700E7E5B8 /* UIView+PointBadge.m */; };
 		C00078451B3A552200E7E5B8 /* UITabBar+SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00078441B3A552200E7E5B8 /* UITabBar+SubView.m */; };
 		C000784E1B3A77E000E7E5B8 /* NSObject+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = C000784C1B3A77E000E7E5B8 /* NSObject+Block.m */; };
@@ -412,7 +410,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03A854D4EB4F75C40944178C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		289CA7E24D472A6E3EA935A3 /* Pods_TeamTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA5CF4F828D5477B4F29686 /* Pods-TeamTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamTalk.release.xcconfig"; path = "Target Support Files/Pods-TeamTalk/Pods-TeamTalk.release.xcconfig"; sourceTree = "<group>"; };
 		810D52141B50ECFA004DF7B4 /* bgImage_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgImage_HL@2x.png"; sourceTree = "<group>"; };
 		810D52151B50ECFA004DF7B4 /* cellLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellLine@2x.png"; sourceTree = "<group>"; };
 		810D52161B50ECFA004DF7B4 /* LCActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCActionSheet.h; sourceTree = "<group>"; };
@@ -467,8 +466,6 @@
 		8170B6901B3934320011E0D0 /* MTTSignatureAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTSignatureAPI.m; sourceTree = "<group>"; };
 		8176F80E1B462B39004E4775 /* UIImage+Rotate_Flip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate_Flip.h"; sourceTree = "<group>"; };
 		8176F80F1B462B39004E4775 /* UIImage+Rotate_Flip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate_Flip.m"; sourceTree = "<group>"; };
-		817CB3AE1B3BC6E80004AFEA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		817CB3AF1B3BC6E80004AFEA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		817CB3B21B3C04940004AFEA /* MTTGroupInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTGroupInfoCell.h; sourceTree = "<group>"; };
 		817CB3B31B3C04940004AFEA /* MTTGroupInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTGroupInfoCell.m; sourceTree = "<group>"; };
 		818654901B3424E3006AFD8F /* MTTUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTUserInfoCell.h; sourceTree = "<group>"; };
@@ -525,7 +522,6 @@
 		81F8502B1B58BD300004F6DE /* mac_logined@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mac_logined@2x.png"; sourceTree = "<group>"; };
 		81F8502D1B58E3110004F6DE /* MTTPCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTPCLoginViewController.h; sourceTree = "<group>"; };
 		81F8502E1B58E3110004F6DE /* MTTPCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTPCLoginViewController.m; sourceTree = "<group>"; };
-		B5814BD6A45D3ECB20653BEA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C00078401B3A466700E7E5B8 /* UIView+PointBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PointBadge.h"; sourceTree = "<group>"; };
 		C00078411B3A466700E7E5B8 /* UIView+PointBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PointBadge.m"; sourceTree = "<group>"; };
 		C00078431B3A552200E7E5B8 /* UITabBar+SubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+SubView.h"; sourceTree = "<group>"; };
@@ -1071,7 +1067,7 @@
 		C0AE39FC1B32C68200B67232 /* EditGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGroupViewController.m; sourceTree = "<group>"; };
 		C0AE39FD1B32C68200B67232 /* EditGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditGroupViewController.xib; sourceTree = "<group>"; };
 		C0AE3A1A1B32C95A00B67232 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		FC7C945FDB2D00B8D439C777 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BE76A86B18AED9DBF2DAAF /* Pods-TeamTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamTalk.debug.xcconfig"; path = "Target Support Files/Pods-TeamTalk/Pods-TeamTalk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1080,10 +1076,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0AE3A1B1B32C95A00B67232 /* libz.dylib in Frameworks */,
-				817CB3B01B3BC6E80004AFEA /* Fabric.framework in Frameworks */,
 				C054EC851B3274E200078809 /* libsecurity.a in Frameworks */,
-				817CB3B11B3BC6E80004AFEA /* Crashlytics.framework in Frameworks */,
-				6802F6EF490DEE71C0552E98 /* libPods.a in Frameworks */,
+				A94D6127417B5BE08B352666 /* Pods_TeamTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1097,22 +1091,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		280D4A8559822D5ACF2BC274 /* Pods */ = {
+		35E5C513423E64436D23F884 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				03A854D4EB4F75C40944178C /* Pods.debug.xcconfig */,
-				B5814BD6A45D3ECB20653BEA /* Pods.release.xcconfig */,
+				E3BE76A86B18AED9DBF2DAAF /* Pods-TeamTalk.debug.xcconfig */,
+				2EA5CF4F828D5477B4F29686 /* Pods-TeamTalk.release.xcconfig */,
 			);
-			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		527B2E51021DC51A46265D31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				817CB3AE1B3BC6E80004AFEA /* Fabric.framework */,
-				817CB3AF1B3BC6E80004AFEA /* Crashlytics.framework */,
 				C0AE3A1A1B32C95A00B67232 /* libz.dylib */,
-				FC7C945FDB2D00B8D439C777 /* libPods.a */,
+				289CA7E24D472A6E3EA935A3 /* Pods_TeamTalk.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1189,8 +1181,8 @@
 				C054EC311B3270D900078809 /* TeamTalk */,
 				C054EC4B1B3270D900078809 /* TeamTalkTests */,
 				C054EC301B3270D900078809 /* Products */,
-				280D4A8559822D5ACF2BC274 /* Pods */,
 				527B2E51021DC51A46265D31 /* Frameworks */,
+				35E5C513423E64436D23F884 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2506,13 +2498,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C054EC521B3270D900078809 /* Build configuration list for PBXNativeTarget "TeamTalk" */;
 			buildPhases = (
-				C737AEAC57352C980D83E347 /* Check Pods Manifest.lock */,
+				6E72925A6574ACBA34ACB6A1 /* [CP] Check Pods Manifest.lock */,
 				468A16201B3937150093C314 /* ShellScript */,
 				C054EC2B1B3270D900078809 /* Sources */,
 				C054EC2C1B3270D900078809 /* Frameworks */,
 				C054EC2D1B3270D900078809 /* Resources */,
-				D9431D98FDF906055AA1F60D /* Copy Pods Resources */,
-				817CB3AD1B3BC68D0004AFEA /* Run Script */,
+				7F53DC599D9B1451A12FC1D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2566,6 +2557,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -2762,50 +2754,74 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Release\" ] || [ \"${CONFIGURATION}\" = \"CI\" ]; then\n\nBUILD_NUMBER=`curl http://www.mogujie.com/mobile/build/increase -F \"identifier=im.teamtalk.tt\" -F \"sign=f41b3c980d33d9d51a0a0df685b20bb9\"`\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"${INFOPLIST_FILE}\"\nfi";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Release\" ] || [ \"${CONFIGURATION}\" = \"CI\" ]; then\n\nBUILD_NUMBER=`curl http://www.mogujie.com/mobile/build/increase -F \"identifier=im.teamtalk.tt\" -F \"sign=f41b3c980d33d9d51a0a0df685b20bb9\"`\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"${INFOPLIST_FILE}\"\nfi\n";
 		};
-		817CB3AD1B3BC68D0004AFEA /* Run Script */ = {
+		6E72925A6574ACBA34ACB6A1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Run Script";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeamTalk-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run c85ad901eb0173a488b631e90f5913415f7424d1 bcd847cf6b15b2605cfff9400a4da335ce5ea3a0ac481dd143db404b55a09e73";
-		};
-		C737AEAC57352C980D83E347 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D9431D98FDF906055AA1F60D /* Copy Pods Resources */ = {
+		7F53DC599D9B1451A12FC1D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeamTalk/Pods-TeamTalk-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/HPGrowingTextView/HPGrowingTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/PSTCollectionView/PSTCollectionView.framework",
+				"${BUILT_PRODUCTS_DIR}/ProtocolBuffers/ProtocolBuffers.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView-Objective-C/SCLAlertView_Objective_C.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVWebViewController/SVWebViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/XHImageViewer/XHImageViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/ZXingObjC/ZXingObjC.framework",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGrowingTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PSTCollectionView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtocolBuffers.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView_Objective_C.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVWebViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XHImageViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZXingObjC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeamTalk/Pods-TeamTalk-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3172,7 +3188,7 @@
 		};
 		C054EC531B3270D900078809 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03A854D4EB4F75C40944178C /* Pods.debug.xcconfig */;
+			baseConfigurationReference = E3BE76A86B18AED9DBF2DAAF /* Pods-TeamTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -3200,7 +3216,7 @@
 		};
 		C054EC541B3270D900078809 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5814BD6A45D3ECB20653BEA /* Pods.release.xcconfig */;
+			baseConfigurationReference = 2EA5CF4F828D5477B4F29686 /* Pods-TeamTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

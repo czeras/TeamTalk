@@ -64,6 +64,24 @@ DEPENDENCIES:
   - XHImageViewer
   - ZXingObjC
 
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - DACircularProgress
+    - FMDB
+    - HPGrowingTextView
+    - Masonry
+    - MBProgressHUD
+    - MWPhotoBrowser
+    - ProtocolBuffers
+    - PSTCollectionView
+    - SCLAlertView-Objective-C
+    - SDWebImage
+    - SVWebViewController
+    - TTTAttributedLabel
+    - XHImageViewer
+    - ZXingObjC
+
 SPEC CHECKSUMS:
   AFNetworking: 05b9f6e3aa5ac45bc383b4bb108ef338080a26c7
   DACircularProgress: 0f92b77239d5f3c612fc66185e2998391ac8e054
@@ -81,4 +99,6 @@ SPEC CHECKSUMS:
   XHImageViewer: 7b275d2aa829e56761c30303b9d51cae086a90b9
   ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-COCOAPODS: 0.38.2
+PODFILE CHECKSUM: 6772a231ade992936230757c0232fed370f6a59c
+
+COCOAPODS: 1.9.3

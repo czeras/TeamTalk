@@ -8,9 +8,11 @@
 
 #import "MTTAvatarManager.h"
 #import "UIImage+UIImageAddition.h"
-#import "SDWebImageManager.h"
 #import <SDWebImage/SDImageCache.h>
 #import "NSURL+SafeURL.h"
+#import <SDWebImageManager.h>
+
+
 #define DD_AVATAR_ARRAY         @"avatarUrlArray"
 #define DD_AVATAR_LAYOUT        @"avatarLayout"
 
