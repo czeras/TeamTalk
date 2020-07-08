@@ -11,7 +11,8 @@
 
 @implementation MTTAFNetworkingClient
 
-static NSString* const DD_URL_BASE = @"http://www.mogujie.com/";
+//static NSString* const DD_URL_BASE = @"http://www.mogujie.com/";
+static NSString* const DD_URL_BASE = @"http://47.110.43.209:8080";
 
 +(void) handleRequest:(id)result
               success:(void (^)(id))success
