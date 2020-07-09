@@ -298,10 +298,13 @@
                 
                 MTTPhotoEnity *photo = [MTTPhotoEnity new];
                 NSString *keyName = [[MTTPhotosCache sharedPhotoCache] getKeyName];
-                NSData *photoData = UIImagePNGRepresentation(newPhoto.image);
+                
+                UIImage *image = [UIImage imageNamed:newPhoto.caption];
+                
+                NSData *photoData = UIImagePNGRepresentation(image);
                 [[MTTPhotosCache sharedPhotoCache] storePhoto:photoData forKey:keyName toDisk:YES];
                 photo.localPath=keyName;
-                photo.image=newPhoto.image;
+                photo.image=image;
                 [[ChattingMainViewController shareInstance] sendImageMessage:photo Image:photo.image];
             }];
         }

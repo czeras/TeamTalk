@@ -90,7 +90,6 @@
 		C054EC381B3270D900078809 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C054EC371B3270D900078809 /* AppDelegate.m */; };
 		C054EC401B3270D900078809 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C054EC3F1B3270D900078809 /* Images.xcassets */; };
 		C054EC431B3270D900078809 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C054EC411B3270D900078809 /* LaunchScreen.xib */; };
-		C054EC4F1B3270D900078809 /* TeamTalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C054EC4E1B3270D900078809 /* TeamTalkTests.m */; };
 		C054EC641B32734800078809 /* MTTConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = C054EC631B32734800078809 /* MTTConstant.m */; };
 		C054EC671B32737300078809 /* MTTUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C054EC661B32737300078809 /* MTTUtil.m */; };
 		C054EC851B3274E200078809 /* libsecurity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C054EC831B3274E200078809 /* libsecurity.a */; };
@@ -399,16 +398,6 @@
 		C0AE3A1B1B32C95A00B67232 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AE3A1A1B32C95A00B67232 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C054EC491B3270D900078809 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C054EC271B3270D900078809 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C054EC2E1B3270D900078809;
-			remoteInfo = TeamTalk;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		289CA7E24D472A6E3EA935A3 /* Pods_TeamTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA5CF4F828D5477B4F29686 /* Pods-TeamTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamTalk.release.xcconfig"; path = "Target Support Files/Pods-TeamTalk/Pods-TeamTalk.release.xcconfig"; sourceTree = "<group>"; };
@@ -537,9 +526,6 @@
 		C054EC371B3270D900078809 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C054EC3F1B3270D900078809 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C054EC421B3270D900078809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C054EC481B3270D900078809 /* TeamTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C054EC4D1B3270D900078809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C054EC4E1B3270D900078809 /* TeamTalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamTalkTests.m; sourceTree = "<group>"; };
 		C054EC581B32715600078809 /* TeamTalk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeamTalk-Prefix.pch"; sourceTree = "<group>"; };
 		C054EC611B3272DC00078809 /* MTTConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTTConfig.h; sourceTree = "<group>"; };
 		C054EC621B32730300078809 /* MTTConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTTConstant.h; sourceTree = "<group>"; };
@@ -1081,13 +1067,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C054EC451B3270D900078809 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1179,7 +1158,6 @@
 			isa = PBXGroup;
 			children = (
 				C054EC311B3270D900078809 /* TeamTalk */,
-				C054EC4B1B3270D900078809 /* TeamTalkTests */,
 				C054EC301B3270D900078809 /* Products */,
 				527B2E51021DC51A46265D31 /* Frameworks */,
 				35E5C513423E64436D23F884 /* Pods */,
@@ -1190,7 +1168,6 @@
 			isa = PBXGroup;
 			children = (
 				C054EC2F1B3270D900078809 /* TeamTalk.app */,
-				C054EC481B3270D900078809 /* TeamTalkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1223,23 +1200,6 @@
 				C054EC581B32715600078809 /* TeamTalk-Prefix.pch */,
 				C054EC331B3270D900078809 /* Info.plist */,
 				C054EC341B3270D900078809 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C054EC4B1B3270D900078809 /* TeamTalkTests */ = {
-			isa = PBXGroup;
-			children = (
-				C054EC4E1B3270D900078809 /* TeamTalkTests.m */,
-				C054EC4C1B3270D900078809 /* Supporting Files */,
-			);
-			path = TeamTalkTests;
-			sourceTree = "<group>";
-		};
-		C054EC4C1B3270D900078809 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C054EC4D1B3270D900078809 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -2514,24 +2474,6 @@
 			productReference = C054EC2F1B3270D900078809 /* TeamTalk.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C054EC471B3270D900078809 /* TeamTalkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C054EC551B3270D900078809 /* Build configuration list for PBXNativeTarget "TeamTalkTests" */;
-			buildPhases = (
-				C054EC441B3270D900078809 /* Sources */,
-				C054EC451B3270D900078809 /* Frameworks */,
-				C054EC461B3270D900078809 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C054EC4A1B3270D900078809 /* PBXTargetDependency */,
-			);
-			name = TeamTalkTests;
-			productName = TeamTalkTests;
-			productReference = C054EC481B3270D900078809 /* TeamTalkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2543,12 +2485,7 @@
 				TargetAttributes = {
 					C054EC2E1B3270D900078809 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = MEU26PKGC2;
-					};
-					C054EC471B3270D900078809 = {
-						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = MEU26PKGC2;
-						TestTargetID = C054EC2E1B3270D900078809;
+						DevelopmentTeam = K498TQR8LL;
 					};
 				};
 			};
@@ -2567,7 +2504,6 @@
 			projectRoot = "";
 			targets = (
 				C054EC2E1B3270D900078809 /* TeamTalk */,
-				C054EC471B3270D900078809 /* TeamTalkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -2730,13 +2666,6 @@
 				C07E65981B3283FB00A5102C /* unselected.png in Resources */,
 				C07E655A1B3283FB00A5102C /* dd_press_to_say_normal.png in Resources */,
 				C07E65641B3283FB00A5102C /* dd_record_too_short.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C054EC461B3270D900078809 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3067,23 +2996,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C054EC441B3270D900078809 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C054EC4F1B3270D900078809 /* TeamTalkTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C054EC4A1B3270D900078809 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C054EC2E1B3270D900078809 /* TeamTalk */;
-			targetProxy = C054EC491B3270D900078809 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C054EC411B3270D900078809 /* LaunchScreen.xib */ = {
@@ -3136,7 +3049,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "1dd25775-aa31-495c-8786-0e68b755cc50";
@@ -3177,7 +3090,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "1dd25775-aa31-495c-8786-0e68b755cc50";
 				SDKROOT = iphoneos;
@@ -3194,6 +3107,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				DEVELOPMENT_TEAM = K498TQR8LL;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3222,6 +3137,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3238,46 +3154,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		C054EC561B3270D900078809 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TeamTalkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeamTalk.app/TeamTalk";
-			};
-			name = Debug;
-		};
-		C054EC571B3270D900078809 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TeamTalkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeamTalk.app/TeamTalk";
 			};
 			name = Release;
 		};
@@ -3298,15 +3174,6 @@
 			buildConfigurations = (
 				C054EC531B3270D900078809 /* Debug */,
 				C054EC541B3270D900078809 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C054EC551B3270D900078809 /* Build configuration list for PBXNativeTarget "TeamTalkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C054EC561B3270D900078809 /* Debug */,
-				C054EC571B3270D900078809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

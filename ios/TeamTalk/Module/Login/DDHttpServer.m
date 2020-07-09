@@ -8,6 +8,8 @@
 
 #import "DDHttpServer.h"
 #import "MTTAFNetworkingClient.h"
+#import <AFNetworking.h>
+
 @implementation DDHttpServer
 - (void)loginWithUserName:(NSString*)userName
                  password:(NSString*)password
@@ -30,21 +32,23 @@
 }
 -(void)getMsgIp:(void(^)(NSDictionary *dic))block failure:(void(^)(NSString* error))failure
 {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager GET:SERVER_ADDR parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    // 添加安全策略
+    AFSecurityPolicy *securityPolicy = [[AFSecurityPolicy alloc] init];
+    [securityPolicy setAllowInvalidCertificates:YES];
+    [manager setSecurityPolicy:securityPolicy];
+    
+    NSString *server_addr = SERVER_ADDR;
+    [manager GET:server_addr parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
-            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
-            block(responseDictionary);
-        
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        block(responseDictionary);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString *errordes = error.domain;
         failure(errordes);
-    } ];
-    
-    
-    
+    }];
 }
 @end

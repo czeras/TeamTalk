@@ -1,55 +1,46 @@
 PODS:
-  - AFNetworking (2.3.1):
-    - AFNetworking/NSURLConnection (= 2.3.1)
-    - AFNetworking/NSURLSession (= 2.3.1)
-    - AFNetworking/Reachability (= 2.3.1)
-    - AFNetworking/Security (= 2.3.1)
-    - AFNetworking/Serialization (= 2.3.1)
-    - AFNetworking/UIKit (= 2.3.1)
-  - AFNetworking/NSURLConnection (2.3.1):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.3.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.3.1)
-  - AFNetworking/Security (2.3.1)
-  - AFNetworking/Serialization (2.3.1)
-  - AFNetworking/UIKit (2.3.1):
-    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - DACircularProgress (2.2.0)
-  - FMDB (2.5):
-    - FMDB/standard (= 2.5)
-  - FMDB/common (2.5)
-  - FMDB/standard (2.5):
-    - FMDB/common
+  - DACircularProgress (2.3.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - HPGrowingTextView (1.1)
-  - Masonry (0.6.1)
-  - MBProgressHUD (0.9.1)
-  - MWPhotoBrowser (1.4.1):
-    - DACircularProgress
-    - MBProgressHUD (~> 0.8)
-    - PSTCollectionView (~> 1.2)
-    - SDWebImage (~> 3.7)
-  - ProtocolBuffers (1.9.8)
+  - Masonry (1.1.0)
+  - MBProgressHUD (0.9.2)
+  - MWPhotoBrowser (2.1.2):
+    - DACircularProgress (~> 2.3)
+    - MBProgressHUD (~> 0.9)
+    - "SDWebImage (!= 3.7.2, ~> 3.7)"
+  - ProtocolBuffers (1.9.11)
   - PSTCollectionView (1.2.3)
-  - SCLAlertView-Objective-C (0.7.3)
-  - SDWebImage (3.7.2):
-    - SDWebImage/Core (= 3.7.2)
-  - SDWebImage/Core (3.7.2)
+  - SCLAlertView-Objective-C (0.7.9)
+  - SDWebImage (3.8.3):
+    - SDWebImage/Core (= 3.8.3)
+  - SDWebImage/Core (3.8.3)
   - SVWebViewController (1.0)
-  - TTTAttributedLabel (1.13.4)
+  - TTTAttributedLabel (2.0.0)
   - XHImageViewer (0.1.2)
-  - ZXingObjC (3.1.0):
-    - ZXingObjC/All (= 3.1.0)
-  - ZXingObjC/All (3.1.0)
+  - ZXingObjC (3.6.5):
+    - ZXingObjC/All (= 3.6.5)
+  - ZXingObjC/All (3.6.5)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.3.0)
-  - DACircularProgress (~> 2.2.0)
+  - AFNetworking
+  - DACircularProgress
   - FMDB (~> 2.3)
   - HPGrowingTextView (~> 1.1)
   - Masonry
@@ -58,7 +49,7 @@ DEPENDENCIES:
   - ProtocolBuffers (~> 1.9.4)
   - PSTCollectionView (~> 1.2.1)
   - SCLAlertView-Objective-C (~> 0.7.3)
-  - SDWebImage (~> 3.6)
+  - SDWebImage
   - SVWebViewController
   - TTTAttributedLabel
   - XHImageViewer
@@ -83,22 +74,22 @@ SPEC REPOS:
     - ZXingObjC
 
 SPEC CHECKSUMS:
-  AFNetworking: 05b9f6e3aa5ac45bc383b4bb108ef338080a26c7
-  DACircularProgress: 0f92b77239d5f3c612fc66185e2998391ac8e054
-  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   HPGrowingTextView: 88a716d97fb853bcb08a4a08e4727da17efc9b19
-  Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
-  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  MWPhotoBrowser: 2531e682860d62b8a7ba8659de02eb9040e431e5
-  ProtocolBuffers: 9a4a171c0c7cc8f21dd29aeca4f9ac775d84a880
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
+  ProtocolBuffers: d509225eb2ea43d9582a59e94348fcf86e2abd65
   PSTCollectionView: 6749df92885353521f55279a7ce2b293762e2be4
-  SCLAlertView-Objective-C: 4bf9a07c8a8d1840e5174e643e16bc032239914d
-  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  SCLAlertView-Objective-C: e36ab12dc1ec4ff6f932888083b21d71a3a1ad23
+  SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
   SVWebViewController: c36dda7326e81fcae0abf5d02bf7bbf7e41be901
-  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   XHImageViewer: 7b275d2aa829e56761c30303b9d51cae086a90b9
-  ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
+  ZXingObjC: fdbb269f25dd2032da343e06f10224d62f537bdb
 
-PODFILE CHECKSUM: 6772a231ade992936230757c0232fed370f6a59c
+PODFILE CHECKSUM: 1d566fd71581ff65904085e1e54a0bc4a5847b64
 
 COCOAPODS: 1.9.3

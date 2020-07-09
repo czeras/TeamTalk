@@ -155,7 +155,7 @@
 -(void)decodeQRImage
 {
     MWPhoto *curImage = [self.photos objectAtIndex:self.browser.currentIndex];
-    ZXImage *img = [[ZXImage alloc]initWithURL:curImage.photoURL];
+    ZXImage *img = [[ZXImage alloc]initWithURL:[NSURL URLWithString:curImage.caption]];
     
     ZXLuminanceSource *source = [[ZXCGImageLuminanceSource alloc] initWithZXImage:img];
     ZXBinaryBitmap *bitmap = [ZXBinaryBitmap binaryBitmapWithBinarizer:[ZXHybridBinarizer binarizerWithSource:source]];
@@ -174,7 +174,7 @@
 {
     MWPhoto *curImage = [self.photos objectAtIndex:self.browser.currentIndex];
     UIImageView *imageview = [UIImageView new];
-    [imageview sd_setImageWithURL:curImage.photoURL];
+    [imageview sd_setImageWithURL:[NSURL URLWithString:curImage.caption]];
     UIImageWriteToSavedPhotosAlbum(imageview.image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
 }
 - (void)image: (UIImage *) image didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo

@@ -16,7 +16,7 @@
 #import "LogoutAPI.h"
 #import "DDClientState.h"
 #import "IMLogin.pb.h"
-#import "AFHTTPRequestOperationManager.h"
+#import <AFNetworking.h>
 #import "MTTSignNotifyAPI.h"
 #import "MTTPCLoginStatusNotifyAPI.h"
 #import "MTTUtil.h"
@@ -44,18 +44,24 @@
     if (self) {
         self.user = [MTTUserEntity new];
         [self registerAPI];
-        [self checkUpdateVersion];
+        //[self checkUpdateVersion];
     }
     return self;
 }
 
 -(void)checkUpdateVersion
 {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager GET:@"http://tt.mogu.io/tt/ios.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+    // 添加安全策略
+    AFSecurityPolicy *securityPolicy = [[AFSecurityPolicy alloc] init];
+    [securityPolicy setAllowInvalidCertificates:YES];
+    [manager setSecurityPolicy:securityPolicy];
+    
+    [manager GET:@"http://tt.mogu.io/tt/ios.json" parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         double version = [responseDictionary[@"version"] doubleValue];
         [MTTUtil setDBVersion:[responseDictionary[@"dbVersion"] intValue]];
@@ -68,10 +74,8 @@
         }else{
               self.updateInfo =@{@"haveupdate":@(NO),@"url":@" "};
         }
-        
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    } ];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    }];
 }
 -(void)registerAPI
 {

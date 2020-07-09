@@ -11,7 +11,6 @@
 #import "ScanQRCodePage.h"
 #import "RuntimeStatus.h"
 #import "MTTUserEntity.h"
-#import "AFHTTPRequestOperationManager.h"
 #import "MTTURLProtocal.h"
 #import <SVWebViewController.h>
 #import <Masonry/Masonry.h>
@@ -44,8 +43,6 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    
-//    self.tableView.contentInset =UIEdgeInsetsMake(0, 0, 0, 0);
     
     self.title = @"发现";
 }

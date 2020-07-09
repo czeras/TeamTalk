@@ -7,15 +7,14 @@
 //
 
 #import "DDSendPhotoMessageAPI.h"
-#import "AFHTTPRequestOperationManager.h"
-
+#import <AFNetworking.h>
 #import "MTTMessageEntity.h"
 #import "MTTPhotosCache.h"
 #import "NSDictionary+Safe.h"
 #import "MTTUtil.h"
 static int max_try_upload_times = 5;
 @interface DDSendPhotoMessageAPI ()
-@property(nonatomic,strong)AFHTTPRequestOperationManager *manager;
+@property (nonatomic,strong) AFHTTPSessionManager *manager;
 @property(nonatomic,strong)NSOperationQueue *queue;
 @property(assign)bool isSending;
 @end
@@ -33,7 +32,7 @@ static int max_try_upload_times = 5;
 {
     self = [super init];
     if (self) {
-        self.manager = [AFHTTPRequestOperationManager manager];
+        self.manager = [AFHTTPSessionManager manager];
         self.manager.responseSerializer.acceptableContentTypes
         = [NSSet setWithObject:@"text/html"];
         self.queue = [NSOperationQueue new];
@@ -58,13 +57,16 @@ static int max_try_upload_times = 5;
             __block UIImage *image = [UIImage imageWithData:imageData];
             NSString *imageName = [NSString stringWithFormat:@"image.png_%dx%d.png",image.size.width,image.size.height];
             NSDictionary *params =[NSDictionary dictionaryWithObjectsAndKeys:@"im_image",@"type", nil];
-            [self.manager POST:urlString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+            
+            [self.manager POST:urlString parameters:params headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
                 [formData appendPartWithFileData:imageData name:@"image" fileName:imageName mimeType:@"image/jpeg"];
-            } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-    
+            } progress:^(NSProgress * _Nonnull uploadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 imageData =nil;
                 image=nil;
-                NSInteger statusCode = [operation.response statusCode];
+                // 这里可能会报错，这个状态码应该根据 responseObject 中的数据获取。
+                NSInteger statusCode = 200;
                 if (statusCode == 200) {
                     NSString *imageURL=nil;
                     if ([responseObject isKindOfClass:[NSDictionary class]]) {
@@ -106,8 +108,7 @@ static int max_try_upload_times = 5;
                     self.isSending=NO;
                     failure(nil);
                 }
-                
-            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 self.isSending=NO;
                 NSDictionary* userInfo = error.userInfo;
                 NSHTTPURLResponse* response = userInfo[AFNetworkingOperationFailingURLResponseErrorKey];

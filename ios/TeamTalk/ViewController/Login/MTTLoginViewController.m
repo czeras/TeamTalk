@@ -145,7 +145,7 @@
     HUD.labelText = @"正在登录";
     
     SCLAlertView *alert = [SCLAlertView new];
-    userName = @"铸剑";
+    userName = @"w_test1";
     password = @"123456";
     [[LoginModule instance] loginWithUsername:userName password:password success:^(MTTUserEntity *user) {
         
@@ -173,7 +173,7 @@
         if([error isEqualToString:@"版本过低"])
         {
             DDLog(@"强制更新");
-            SCLAlertView *alert = [SCLAlertView new];
+//            SCLAlertView *alert = [SCLAlertView new];
             [alert addButton:@"确定" actionBlock:^{
                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://tt.mogu.io"]];
             }];

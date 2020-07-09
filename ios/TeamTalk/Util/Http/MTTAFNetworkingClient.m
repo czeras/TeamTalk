@@ -8,11 +8,12 @@
 
 #import "MTTAFNetworkingClient.h"
 #import "NSDictionary+Safe.h"
+#import <AFNetworking.h>
 
 @implementation MTTAFNetworkingClient
 
-//static NSString* const DD_URL_BASE = @"http://www.mogujie.com/";
-static NSString* const DD_URL_BASE = @"http://47.110.43.209:8080";
+static NSString* const DD_URL_BASE = @"http://www.mogujie.com/";
+//static NSString* const DD_URL_BASE = @"http://47.110.43.209:8080";
 
 +(void) handleRequest:(id)result
               success:(void (^)(id))success
@@ -50,8 +51,10 @@ static NSString* const DD_URL_BASE = @"http://47.110.43.209:8080";
 }
 +(void) jsonFormRequest:(NSString *)url param:(NSDictionary *)param fromBlock:(void (^)(id <AFMultipartFormData> formData))block success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:url parameters:param headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if ([responseObject respondsToSelector:@selector(objectForKey:)]) {
             [MTTAFNetworkingClient handleRequest:(NSDictionary *)responseObject success:success failure:failure];
         }else
@@ -59,24 +62,32 @@ static NSString* const DD_URL_BASE = @"http://47.110.43.209:8080";
             NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
             [MTTAFNetworkingClient handleRequest:responseDictionary success:success failure:failure];
         }
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         BLOCK_SAFE_RUN(failure,error);
     }];
 }
 +(void) jsonFormPOSTRequest:(NSString *)url param:(NSDictionary *)param success:(void (^)(id))success failure:(void (^)(NSError *))failure{
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    // 添加安全策略
+    AFSecurityPolicy *securityPolicy = [[AFSecurityPolicy alloc] init];
+   [securityPolicy setAllowInvalidCertificates:YES];
+   [manager setSecurityPolicy:securityPolicy];
+
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     NSString *fullPath = [NSString stringWithFormat:@"%@%@",DD_URL_BASE,url];
     
-    [manager POST:fullPath parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:fullPath parameters:param headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSLog(@"%@<------",string);
         [MTTAFNetworkingClient handleRequest:responseDictionary success:success failure:failure];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if([error.domain isEqualToString:NSURLErrorDomain])
             error = [NSError errorWithDomain:@"没有网络连接。" code:-100 userInfo:nil];
         BLOCK_SAFE_RUN(failure,error);
